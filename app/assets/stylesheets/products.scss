@@ -1,3 +1,42 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html,
+body {
+   margin: 0;
+   height: 100%;
+}
+
+body {
+  font-family: 'Montserrat', Helvetica, Arial, sans-serif;
+  background-color: rgba(223, 163, 64, 1);
+}
+
+h1 {
+  font-size: 3em;
+  color: #fff;
+  padding-top: 50px;
+}
+
+th {
+  font-size: 2em;
+  color: #000;
+  padding: 10px;
+}
+
+.new-product {
+  float: right;
+  padding: 10px;
+}
+
+.new-product a,
+.new-product a:visited {
+  text-decoration: none;
+  color: #000;
+}
+
+.new-product a:hover {
+  font-style: italic;
+  background-color: transparent;
+  color: #000;
+}
