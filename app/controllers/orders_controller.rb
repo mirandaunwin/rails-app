@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
 
   def index
-    @orders = Order.includes(:product).all
+    @orders = Order.all
   end
 
   def show
