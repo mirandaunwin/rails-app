@@ -8,7 +8,7 @@
   <div class="carousel-inner">
     <% @products.each do |product| %>
     <div class="carousel-item<%=  " active" if product == @products.first %>">
-      <%= image_tag(product.image_url, class: "img-fluid", id: "carousel-images") %>
+      <%= link_to image_tag(product.image_url, class: "img-fluid", id: "carousel-images"), products_path %>
       <div class="carousel-caption d-none d-md-block">
         <%= product.name %>
       </div>

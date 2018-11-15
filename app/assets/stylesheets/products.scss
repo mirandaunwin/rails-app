@@ -56,13 +56,15 @@ h2 {
 .new-product a,
 .new-product a:visited,
 p a,
-p a:visited {
+p a:visited,
+.product-grid a {
   text-decoration: none;
   color: #000;
 }
 
 .new-product a:hover,
-p a:hover {
+p a:hover,
+.product-grid a:hover {
   font-style: italic;
   background-color: transparent;
   color: #000;

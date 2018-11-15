@@ -1,5 +1,5 @@
 <div class="col-sm">
-  <a href="#"><h2><%= product.name %></h2></a>
+  <h2><%= link_to product.name, product %></h2>
   <%= image_tag(product.image_url, class: "img-fluid") %>
   <br><br>
   <p class="product-info"><%= product.description %></p>
