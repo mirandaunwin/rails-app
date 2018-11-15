@@ -25,14 +25,24 @@ h2 {
   font-weight: 700;
 }
 
-.col-sm {
+.product-partial,
+.single-product {
   background-color: #fff;
-  margin: 5px;
   border-radius: 25px;
+}
+
+.product-partial {
+  margin: 5px;
+}
+
+.single-product {
+  margin-top: 40px;
+  padding-bottom: 5px;
 }
 
 .img-fluid {
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .product-grid {
@@ -68,4 +78,9 @@ p a:hover,
   font-style: italic;
   background-color: transparent;
   color: #000;
+}
+
+textarea,
+input {
+  text-align: center;
 }

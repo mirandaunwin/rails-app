@@ -1,26 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= @product.name %>
-</h1>
+<div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 single-product text-center">
+  <h2><%= @product.name %></h2>
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+  <p class="product-info col-sm-8 offset-sm-2">
+    <strong>Description:</strong>
+    <%= @product.description %>
+  </p>
 
-<%= image_tag(@product.image_url, class: "img-fluid") %>
+  <%= image_tag(@product.image_url, class: "img-fluid product-img") %>
 
+  <p class="product-info">
+    <strong>Colour:</strong>
+    <%= @product.colour %>
+  </p>
+  <p class="product-info">
+    <strong>Price:</strong>
+    €<%= @product.price %>
+  </p>
 
-<p>
-  <strong>Colour:</strong>
-  <%= @product.colour %>
-</p>
+  <p class="edit">
+    <%= link_to 'Edit', edit_product_path(@product) %> |
+    <%= link_to 'Back', products_path %>
+  </p>
 
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>
