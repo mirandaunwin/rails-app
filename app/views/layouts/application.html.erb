@@ -5,6 +5,8 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -25,6 +27,12 @@
       <%= link_to "About", simple_pages_about_path %>
       <%=link_to "Contact", simple_pages_contact_path %>
       <%= link_to "Products",products_path %>
+      <%= form_with(url: products_path, method: 'get', local: true, id: 'search-bar') do |form| %>
+
+        <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control-sm" %>
+        <%= form.submit "Search", class: "btn btn-outline-secondary btn-sm" %>
+
+      <% end %>
     </nav>
 
 

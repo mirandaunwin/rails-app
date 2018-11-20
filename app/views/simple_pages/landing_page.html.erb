@@ -1,7 +1,7 @@
 <div id="carouselExampleIndicators" class="carousel slide text-center" data-ride="carousel">
   <ol class="carousel-indicators">
-    <% @products.each_with_index do |product| %>
-    <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+    <% @products.each_with_index do |product, i| %>
+    <li data-target="#carouselExampleIndicators" data-slide-to="<%= i %>"></li>
     <% end %>
   </ol>
 

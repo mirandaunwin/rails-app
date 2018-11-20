@@ -30,10 +30,35 @@ body {
   font-style: italic;
 }
 
+#q {
+  border: 1px;
+  border-radius: .2rem;
+}
+
+.btn-outline-secondary {
+  color: #fff;
+  border-color: #fff;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #fff;
+  color: rgba(223, 163, 64, 1);
+  border-color: #fff;
+}
+
 h1 {
   font-size: 3em;
   color: #fff;
   padding-top: 50px;
+}
+
+@media (max-width:700px){
+  h1 {
+    padding-top: 70px;
+  }
+  #search-bar {
+    padding-top: 5px;
+  }
 }
 
 /* Carousel */
@@ -41,7 +66,13 @@ h1 {
 #carouselExampleIndicators {
   margin: 0 auto;
   width: 360px;
-  padding-top: 35px;
+  padding-top: 50px;
+}
+
+@media (max-width:700px){
+  #carouselExampleIndicators {
+    padding-top: 70px;
+  }
 }
 
 #carouselExampleIndicators a:hover {
@@ -106,10 +137,13 @@ h1 {
 .img-responsive {
   max-width: 100%;
   height: auto;
-  padding-bottom: 24px;
   border-radius: 10px;
+  overflow: hidden;
 }
 
+.footer-padding {
+  padding-bottom: 25px;
+}
 .footer span {
   font-size: 0.8em;
 }
