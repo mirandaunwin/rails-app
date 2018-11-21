@@ -22,11 +22,11 @@ body {
 }
 
 .navbar a {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-.navbar a:hover {
+.nav-links a:hover {
   font-style: italic;
 }
 
@@ -44,6 +44,21 @@ body {
   background-color: #fff;
   color: rgba(223, 163, 64, 1);
   border-color: #fff;
+}
+
+a#login-button,
+a#logout-button {
+  background-color: #fff;
+  color: rgba(223, 163, 64, 1);
+  border-color: #fff;
+}
+
+a#login-button:hover,
+a#logout-button:hover {
+  color: #fff;
+  border-color: #fff;
+  background-color: rgba(223, 163, 64, 1);
+  font-style: none !important;
 }
 
 h1 {

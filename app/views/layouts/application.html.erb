@@ -23,18 +23,27 @@
   <body>
     <!-- Nav -->
     <nav class="navbar fixed-top navbar-expand-lg justify-content-center">
-      <%= link_to "Home", root_path %>
-      <%= link_to "About", simple_pages_about_path %>
-      <%=link_to "Contact", simple_pages_contact_path %>
-      <%= link_to "Products",products_path %>
+      <div class="nav-links">
+        <%= link_to "Home", root_path %>
+        <%= link_to "About", simple_pages_about_path %>
+        <%=link_to "Contact", simple_pages_contact_path %>
+        <%= link_to "Products",products_path %>
+      </div>
       <%= form_with(url: products_path, method: 'get', local: true, id: 'search-bar') do |form| %>
 
         <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control-sm" %>
         <%= form.submit "Search", class: "btn btn-outline-secondary btn-sm" %>
 
+      <% if user_signed_in? %>
+        <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-sm", id: "logout-button") %>
+      <% else %>
+        <%= link_to('Login', new_user_session_path, class: "btn btn-sm", id: "login-button") %>
+      <% end %>
+
       <% end %>
     </nav>
 
+    <p class="notice"><%= notice %></p>
 
     <%= yield %>
 
