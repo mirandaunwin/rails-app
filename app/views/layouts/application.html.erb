@@ -43,7 +43,13 @@
       <% end %>
     </nav>
 
-    <p class="notice"><%= notice %></p>
+    <% if alert %>
+      <p id="alert" class="alert alert-light" role="alert"><%= alert %></p>
+    <% end %>
+
+    <% if notice %>
+      <p id="notice" class="alert alert-danger" role="alert"><%= notice %></p>
+    <% end %>
 
     <%= yield %>
 
