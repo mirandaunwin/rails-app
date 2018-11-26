@@ -61,13 +61,17 @@ a#logout-button:hover {
   font-style: none !important;
 }
 
+.alert-container {
+  padding-top: 50px;
+}
+
 h1 {
   font-size: 3em;
   color: #fff;
   padding-top: 50px;
 }
 
-@media (max-width:700px){
+@media (max-width:762px){
   h1 {
     padding-top: 70px;
   }

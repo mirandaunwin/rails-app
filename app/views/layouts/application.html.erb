@@ -22,6 +22,7 @@
 
   <body>
     <!-- Nav -->
+
     <nav class="navbar fixed-top navbar-expand-lg justify-content-center">
       <div class="nav-links">
         <%= link_to "Home", root_path %>
@@ -33,6 +34,9 @@
 
         <%= form.text_field :q, id: 'q', value: params[:q], class: "form-control-sm" %>
         <%= form.submit "Search", class: "btn btn-outline-secondary btn-sm" %>
+      <% end %>
+
+      <%= link_to "Account", users_path %>
 
       <% if user_signed_in? %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-sm", id: "logout-button") %>
@@ -40,16 +44,18 @@
         <%= link_to('Login', new_user_session_path, class: "btn btn-sm", id: "login-button") %>
       <% end %>
 
-      <% end %>
     </nav>
 
-    <% if alert %>
-      <p id="alert" class="alert alert-light" role="alert"><%= alert %></p>
-    <% end %>
+    <div class="alert-container">
+      <% if alert %>
+        <p id="alert" class="alert alert-light" role="alert"><%= alert %></p>
+      <% end %>
 
-    <% if notice %>
-      <p id="notice" class="alert alert-danger" role="alert"><%= notice %></p>
-    <% end %>
+      <% if notice %>
+        <p id="notice" class="alert alert-danger" role="alert"><%= notice %></p>
+      <% end %>
+    </div>
+
 
     <%= yield %>
 
