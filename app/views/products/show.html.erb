@@ -24,4 +24,12 @@
     <%= link_to 'Back', products_path %>
   </p>
 
+  <div class="review container">
+    <%= @product.highest_rating_comment %>
+  </div>
+
+  <div class="review container">
+    <%= @product.lowest_rating_comment %>
+  </div>
+
 </div>

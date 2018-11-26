@@ -36,7 +36,7 @@
         <%= form.submit "Search", class: "btn btn-outline-secondary btn-sm" %>
       <% end %>
 
-      <%= link_to "Account", users_path %>
+      <%= link_to content_tag(:i, nil, class: 'fas fa-user-cog'), users_path %>
 
       <% if user_signed_in? %>
         <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "btn btn-sm", id: "logout-button") %>
