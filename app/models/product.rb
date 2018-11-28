@@ -15,6 +15,14 @@ class Product < ApplicationRecord
     comments.rating_asc.first
   end
 
+  delegate :body, to: :highest_rating_comment, prefix: true
+
+  delegate :body, to: :lowest_rating_comment, prefix: true
+
+  delegate :rating, to: :highest_rating_comment, prefix: true
+
+  delegate :rating, to: :lowest_rating_comment, prefix: true
+
   def average_rating
     comments.average(:rating).to_f
   end
