@@ -1,0 +1,13 @@
+// Place all the styles related to the comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.btn-outline-primary {
+  color: rgba(223, 163, 64, 1);
+  border-color: rgba(223, 163, 64, 1);
+}
+
+.btn-outline-primary:hover {
+  background-color: rgba(223, 163, 64, 1);
+  color: #fff;
+  border-color: rgba(223, 163, 64, 1);
+}

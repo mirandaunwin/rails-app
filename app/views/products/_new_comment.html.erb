@@ -1,0 +1,22 @@
+<% if signed_in? %>
+  <h4>Add a review:</h4>
+  <%= form_for([@product, @product.comments.build]) do |f| %>
+
+  <div class="form-container">
+    <div class="row">
+      <div class="col-12 col-sm-8 offset-sm-2">
+        <div class="form-group">
+          <%= f.text_area :body, class: "form-control" %>
+        </div>
+        <p>
+          <div class="rating mb-2"></div>
+        </p>
+
+        <div class="form-group">
+          <%= f.submit "Submit", class: "btn btn-outline-primary" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+<% end %>
