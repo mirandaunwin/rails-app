@@ -33,6 +33,10 @@ h3 {
   color: #fff;
 }
 
+p {
+
+}
+
 @media (max-width:762px){
   h1 {
     padding-top: 50px;
@@ -117,4 +121,13 @@ p a:hover,
 .form-control {
   text-align: center;
   font-size: 1.5em;
+}
+
+.product-reviews {
+  padding-top: 10px;
+}
+
+.user-reviews,
+.rated {
+  padding-bottom: 5px;
 }
