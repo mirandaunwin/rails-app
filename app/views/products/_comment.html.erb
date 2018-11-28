@@ -1,11 +1,11 @@
-<!-- <div class="best-worst-container">
+<div class="best-worst-container">
   <div class="row">
     <div class="col-6">
-      <h5>Most positive review:</h5><p><div class="rated" data-score="<%#= @product.highest_rating_comment.rating %>"></div><%#= @product.highest_rating_comment.body %></p>
+      <h5>Most positive review:</h5><p><div class="rated" data-score="<%= @product.highest_rating_comment.rating %>"></div><%= @product.highest_rating_comment.body %></p>
     </div>
 
     <div class="col-6">
-      <h5>Most critical review:</h5><p><div class="rated" data-score="<%#= @product.lowest_rating_comment.rating %>"></div><%#= @product.lowest_rating_comment.body %></p>
+      <h5>Most critical review:</h5><p><div class="rated" data-score="<%= @product.lowest_rating_comment.rating %>"></div><%= @product.lowest_rating_comment.body %></p>
     </div>
   </div>
-</div> -->
+</div>
