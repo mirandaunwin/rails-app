@@ -23,6 +23,8 @@ class Product < ApplicationRecord
 
   delegate :rating, to: :lowest_rating_comment, prefix: true, allow_nil: true
 
+  validates :name, presence: true
+
   def average_rating
     comments.average(:rating).to_f
   end

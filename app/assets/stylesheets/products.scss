@@ -131,3 +131,23 @@ p a:hover,
 .rated {
   padding-bottom: 5px;
 }
+
+.pagination {
+  text-align: center;
+  padding: 1em;
+  display: inline-block;
+}
+.pagination a, .pagination span {
+  padding: 0.5em;
+}
+.pagination .disabled {
+  color: #aaaaaa;
+}
+.pagination .current {
+  color: rgba(223, 163, 64, 1);
+  font-weight: 900;
+}
+.pagination a:hover {
+  text-decoration: none;
+  color: rgba(223, 163, 64, 1);
+}
