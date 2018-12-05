@@ -1,5 +1,6 @@
 <div class="col-sm product-partial">
   <h2><%= link_to product.name, product %></h2>
+  <% logger.debug "Product name is #{product.name}"%>
   <%= image_tag(product.image_url, class: "img-fluid") %>
   <br><br>
   <p class="product-info"><%= product.description %></p>
