@@ -51,7 +51,8 @@ a:visited.register-links {
   color: #000;
 }
 
-a:hover.register-links {
+a:hover.register-links,
+a:hover.user-edit {
   background-color: transparent;
   color: #fff;
 }
