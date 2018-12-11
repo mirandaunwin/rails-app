@@ -17,6 +17,8 @@ Rails.application.configure do
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
     config.action_controller.perform_caching = true
 
+    config.action_controller.enable_fragment_cache_logging = true
+
     config.cache_store = :memory_store
     config.public_file_server.headers = {
       'Cache-Control' => "public, max-age=#{2.days.to_i}"
@@ -38,7 +40,7 @@ Rails.application.configure do
 
   #5.3 Devise
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
-  
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 

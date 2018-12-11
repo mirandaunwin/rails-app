@@ -1,11 +1,13 @@
-<div class="col-sm product-partial">
-  <h2><%= link_to product.name, product %></h2>
-  <%= link_to image_tag(product.image_url, class: "img-fluid", width: "360"), product_path(product) %>
-  <br><br>
-  <p class="product-info"><%= product.description %></p>
-  <p class="product-info"><%= product.colour %></p>
-  <p class="product-info">€<%= product.price %></p>
-  <p class="edit"><%= link_to 'Show', product %> |
-  <%= link_to 'Edit', edit_product_path(product) %> |
-  <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-</div><!-- /col -->
+<% cache product do %>
+  <div class="col-sm product-partial">
+    <h2><%= link_to product.name, product %></h2>
+    <%= link_to image_tag(product.image_url, class: "img-fluid", width: "360"), product_path(product) %>
+    <br><br>
+    <p class="product-info"><%= product.description %></p>
+    <p class="product-info"><%= product.colour %></p>
+    <p class="product-info">€<%= product.price %></p>
+    <p class="edit"><%= link_to 'Show', product %> |
+    <%= link_to 'Edit', edit_product_path(product) %> |
+    <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  </div>
+<% end %>
