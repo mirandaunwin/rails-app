@@ -1,13 +1,6 @@
-<div class="product-reviews">
+<div class="product-reviews" id="product-comment">
   <% @comments.each do |comment| %>
-    <div class="user-reviews">
-      <div class="rated" data-score="<%= comment.rating %>"></div>
-      <h5><%= comment.body %></h5>
-      <p><%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small></p>
-      <% if signed_in? && current_user.admin? %>
-        <p><%= link_to ('<span class="far fa-trash-alt"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
-      <% end %>
-    </div>
+    <%= render comment %>
   <% end %>
 
 </div>

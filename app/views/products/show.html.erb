@@ -26,10 +26,10 @@
     <%= link_to 'Back', products_path %>
   </p>
 
-  <h5>Average Rating: <div class="rated" data-score="<%= @product.average_rating %>"></div></h5>
+  <h5>Average Rating: <div class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></div></h5>
 
   <div class="review container">
-    <%= render "comment" %>
+    <%= render "rated_comments" %>
   </div>
 
   <div class="product-reviews">
