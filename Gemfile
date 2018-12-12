@@ -73,3 +73,7 @@ gem 'rails-controller-testing'
 gem 'stripe'
 
 gem 'dalli'
+
+gem 'redis-rails'
+
+gem 'newrelic_rpm'
