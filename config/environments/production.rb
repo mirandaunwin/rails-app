@@ -107,5 +107,5 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.web_socket_server_url = "wss://berlinskindemo.herokuapp.com/cable"
-  config.action_cable.allallowed_request_origins = ['https://berlinskindemo.herokuapp.com', 'http://berlinskindemo.herokuapp.com']
+  config.action_cable.allowed_request_origins = ['https://berlinskindemo.herokuapp.com', 'http://berlinskindemo.herokuapp.com']
 end
