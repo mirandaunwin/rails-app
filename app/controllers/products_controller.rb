@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def index
     if params[:q]
       search_term = params[:q]
+      search_term = search_term.downcase unless search_term.nil?
       @products = Product.search(search_term)
     else
       @products = Product.all
