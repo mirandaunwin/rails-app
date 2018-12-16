@@ -21,5 +21,9 @@ describe Product do
       expect(Product.new(description: "Some text.")).not_to be_valid
     end
 
+    it "is not valid without a price" do
+      expect(Product.new(price: nil)).not_to be_valid
+    end
+
   end
 end

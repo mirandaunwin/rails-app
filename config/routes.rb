@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'payments/create'
-  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: "user_registrations" }
+  devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout', sign_up: 'join'}, controllers: { registrations: "user_registrations" }
 
   resources :products do
     resources :comments
