@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: postgresql
-  url: postgres://zydtrkkrvlkrut:e76b9a1ce9b4671ce1c0d4b4cfc9c1d70f617fa712811cd9100402f4c6543dca@ec2-54-243-61-194.compute-1.amazonaws.com:5432/dftfusr0fgoomo
+  url: <%= ENV["DATABASE_URL"] %>
   channel_prefix: nameofapp_production

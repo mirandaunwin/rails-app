@@ -2,7 +2,7 @@
   <% @orders.each do |order| %>
     <div class="col-sm">
       <h1>
-        Order # <% order.id %>:
+        Order # <%= order.id %>:
         <%= link_to order.product.name, order %>
       </h1>
       <%= image_tag(order.product.image_url, class: "img-fluid order-img") %>
